@@ -42,7 +42,7 @@ public class Blade : MonoBehaviour
         Vector2 newPos = cam.ScreenToWorldPoint(Input.mousePosition);
         rb.position = newPos;
 
-        float velocity = (newPos - prevPos).magnitude / Time.deltaTime;
+        float velocity = (newPos - prevPos).magnitude * Time.deltaTime;
         if (velocity > minCuttingVelocity)
         {
             circleCollider.enabled = true;
